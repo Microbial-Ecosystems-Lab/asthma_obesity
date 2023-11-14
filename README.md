@@ -6,6 +6,6 @@ $ fastqc -o fastqc *.fastq
 $ multiqc fastqc
 
 BEFORE:
-[https://raw.githack.com/Microbial-Ecosystems-Lab/asthma_obesity/main/multiqc_report.html]
+https://rawcdn.githack.com/Microbial-Ecosystems-Lab/asthma_obesity/main/multiqc_report.html
 
 AFTER:

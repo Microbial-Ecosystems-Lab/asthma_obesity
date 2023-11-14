@@ -3,6 +3,7 @@
 ## Quality control analysis before and after trimming/clipping
 
 $ fastqc -o fastqc *.fastq
+
 $ multiqc fastqc
 
 BEFORE:

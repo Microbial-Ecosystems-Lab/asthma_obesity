@@ -20,7 +20,7 @@ https://zenodo.org/records/4587955#.YfxAfOrMI2w
 
 All sequences' ID were downloaded from NCBI (see file IDs_16Ssequences.txt).
 
-To download the nucleotide sequence we used edirect 
+To download the sequences we used edirect 
 
 $ split -l 1000 IDs_16Ssequences.txt 
 

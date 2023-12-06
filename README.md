@@ -16,6 +16,15 @@ https://rawcdn.githack.com/Microbial-Ecosystems-Lab/asthma_obesity/3cfe0d18e9649
 
 https://zenodo.org/records/4587955#.YfxAfOrMI2w
 
+# Custom database - Refseq NCBI 16S sequences
+
+All sequences' ID were downloaded from NCBI (see file IDs_16Ssequences.txt)
+To download the nucleotide sequence we used edirect 
+
+$ split -l 1000 IDs_16Ssequences.txt 
+$ for i in `ls x*`; do epost -db nuccore -input ${i} -format acc | efetch -format fasta > ${i}.fasta; done
+$ cat *.fasta > 16Ssequences.fasta
+
 # Filter quality and length
 
 Nanofilt

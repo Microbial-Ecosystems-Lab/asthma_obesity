@@ -15,3 +15,9 @@ https://rawcdn.githack.com/Microbial-Ecosystems-Lab/asthma_obesity/3cfe0d18e9649
 # Taxonomy database
 
 https://zenodo.org/records/4587955#.YfxAfOrMI2w
+
+# Filter quality and length
+
+Nanofilt
+
+$ 

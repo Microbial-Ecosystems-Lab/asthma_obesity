@@ -28,6 +28,12 @@ $ for i in `ls x*`; do epost -db nuccore -input ${i} -format acc | efetch -forma
 
 $ cat *.fasta > 16Ssequences.fasta
 
+# Full lineage annotation
+
+$ ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
+
+See script get_lineage.py
+
 # Filter quality and length
 
 Nanofilt

@@ -32,7 +32,7 @@ $ cat *.fasta > 16Ssequences.fasta
 
 $ ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
 
-See script get_lineage.py
+See script get_lineage.ipynb
 
 # Filter quality and length
 

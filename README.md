@@ -12,9 +12,9 @@ https://rawcdn.githack.com/Microbial-Ecosystems-Lab/asthma_obesity/main/multiqc_
 AFTER:
 https://rawcdn.githack.com/Microbial-Ecosystems-Lab/asthma_obesity/3cfe0d18e96491b26cf1067e031757893af98d52/multiqc_report_filtered.html
 
-# Taxonomy database
+# Filter quality and length
 
-https://zenodo.org/records/4587955#.YfxAfOrMI2w
+See script 1-Preprocessing.ipynb
 
 # Custom database - Refseq NCBI 16S sequences
 
@@ -28,14 +28,21 @@ $ for i in `ls x*`; do epost -db nuccore -input ${i} -format acc | efetch -forma
 
 $ cat *.fasta > 16Ssequences.fasta
 
-# Full lineage annotation
+# Reference alignment
 
-$ ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz
+Using KMA-1.3.23 - Clausen, Aarestrup & Lund. Rapid and precise alignment of raw reads against redundant databases with KMA. BMC Bioinformatics, 19, 307 (2018).
 
-See script get_lineage.ipynb
+$ kma index -i 16Ssequences.fasta -o 16sequences_index_kma/16Ssequences
 
-# Filter quality and length
+$ kma -i ${i}.fastq -o output_16s_refseq/${i}_kma -t_db 16sequences_index_kma/16Ssequences -bcNano -bc 0.7
 
-Nanofilt
+# Taxonomy annotation
 
-$ 
+Taxonomy database
+
+$ wget https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz
+
+$ tar -zxvf new_taxdump.tar.gz
+
+See script 2-AssignTaxonomy_Refseq16S.ipynb
+

@@ -28,6 +28,16 @@ $ for i in `ls x*`; do epost -db nuccore -input ${i} -format acc | efetch -forma
 
 $ cat *.fasta > 16Ssequences.fasta
 
+# TaxID database
+
+Step necessary to link Refseq access number to a full lineage annotation
+
+$ wget https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz
+
+$ tar -zxvf new_taxdump.tar.gz
+
+See script 2-Parsing_Database_Refseq16S.ipynb
+
 # Reference alignment
 
 Using KMA-1.3.23 - Clausen, Aarestrup & Lund. Rapid and precise alignment of raw reads against redundant databases with KMA. BMC Bioinformatics, 19, 307 (2018).
@@ -36,13 +46,5 @@ $ kma index -i 16Ssequences.fasta -o 16sequences_index_kma/16Ssequences
 
 $ kma -i ${i}.fastq -o output_16s_refseq/${i}_kma -t_db 16sequences_index_kma/16Ssequences -bcNano -bc 0.7
 
-# Taxonomy annotation
 
-Taxonomy database
-
-$ wget https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/new_taxdump/new_taxdump.tar.gz
-
-$ tar -zxvf new_taxdump.tar.gz
-
-See script 2-AssignTaxonomy_Refseq16S.ipynb
 

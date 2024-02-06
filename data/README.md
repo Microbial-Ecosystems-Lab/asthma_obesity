@@ -1,3 +1,3 @@
-rankedlineage.dmp is to big to upload here.
+rankedlineage.dmp is too big to upload here.
 
 Download it from NCBI.

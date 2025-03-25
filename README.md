@@ -28,6 +28,9 @@ $ for i in `ls x*`; do epost -db nuccore -input ${i} -format acc | efetch -forma
 
 $ cat *.fasta > 16Ssequences.fasta
 
+OBS.: "NR_181206.1" "NR_179899.1" "NR_177715.1" "NR_177711.1" "NR_074799.1" "NR_172695.1" "NR_157681.1" "NR_074597.1" "NR_028866.1"
+      "These RefSeqs records were removed because data validation identified problems with the assembly or annotation". 
+
 # TaxID database
 
 Step necessary to link Refseq access number to a full lineage annotation
